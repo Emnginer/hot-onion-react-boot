@@ -1,0 +1,16 @@
+.food-wrapper{
+    display: flex;
+    justify-content:space-around ;
+}
+
+.food-img img{
+    width:500px;
+}
+
+.food-desc button{
+    margin: 20px 0 20px 0
+}
+.food-desc span{
+    font-size: 40px;
+    margin-left:8px
+}

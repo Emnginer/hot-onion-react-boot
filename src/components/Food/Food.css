@@ -1,0 +1,31 @@
+
+/* .checkOut-btn{
+    position: relative;   
+    bottom: 0%;
+    display: block;
+    text-align: center;
+    margin:30px auto;
+    
+} */
+.food-nav li{
+    padding:10px 7px;
+    transition:all 4s ease;
+    
+}
+.food-nav li a{
+    color:black;
+    font-weight: bold;
+    
+    
+}
+.food-nav li :focus{
+    color: #E7173F;
+    font-weight: bold;
+    border-bottom: 3px solid #E7173Fed;
+}
+.food-nav li :hover{
+    color: #E7173F;
+    font-weight: bold;
+    border-bottom: 3px solid #E7173F;
+    
+}

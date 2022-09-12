@@ -1,0 +1,47 @@
+.signUp{
+    background-color: #E7173F;
+    border-radius: 20px;
+    margin:10px;
+ 
+}
+.signUp a{
+    color:white;
+    text-decoration: none;
+    padding:8px;
+    font-weight: 700;
+}
+.signUp a:hover{
+    color:#E7173F;  
+}
+.signUp:hover{
+    background-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.login{
+    background-color: white;
+    border-radius: 20px;
+    margin:10px;
+}
+.login a {
+    color:#E7173F;
+    padding: 8px;
+    font-weight: bold;
+}
+.login a:hover{
+    color:white;
+    font-weight: bold;
+}
+.login:hover{
+    background-color: #E7173F;
+    color:white;
+}
+.cart-icon a{
+    font-weight: bold;
+}
+.cart-icon a:hover{
+    color:black;
+    font-weight: 700;
+
+}

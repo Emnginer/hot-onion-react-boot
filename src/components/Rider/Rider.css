@@ -1,0 +1,8 @@
+.rider img {
+    background-size: cover;
+    width:100%; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 700px;
+    position: fixed;
+}

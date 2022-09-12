@@ -1,0 +1,10 @@
+.order-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.order-info{
+    background-color: aliceblue;
+    padding: 20px
+}
+.order-info li{}

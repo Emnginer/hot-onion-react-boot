@@ -1,0 +1,17 @@
+
+
+.food-item {
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding: 17px;
+    transition: all 0.3s;
+    color:black;
+    margin:10px
+}
+
+.food-item:hover {
+    box-shadow: 0 0 13px 0 #d4c9c9;
+   
+  
+}
