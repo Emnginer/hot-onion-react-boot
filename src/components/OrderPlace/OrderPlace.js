@@ -1,30 +1,20 @@
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../images/logo2.png';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import bikeLogo from '../../images/Group 1151.png'
 import './OrderPlace.css'
+import NavBar from '../NavBar/NavBar';
 
 const OrderPlace = (props) => {
+
     const cart = props.cart
     return (
-        <div>
-            <div className='container header'>
-                <div>
-                    <img src={logo} alt="" style={{ width: '200px' }} />
-                </div>
-                <div className='nav'>
-                    <nav>
-                        <ul>
-                            <Link to="/food/ProceedCart"><FontAwesomeIcon icon={faShoppingCart} /> <sup>{cart?.length}</sup></Link>
-                            <Link to="/login">Login</Link>
-                            <Link to="/signUp">Sign Up</Link>
-
-                        </ul>
-                    </nav>
-                </div>
+        <div  className='container'>
+            <div>
+              <NavBar cart={cart}></NavBar>
             </div>
 
 
@@ -35,6 +25,8 @@ const OrderPlace = (props) => {
                 </div>
                 <div className='order-info'>
                     <div>
+
+
                         <img src={bikeLogo} alt="" style={{ width: '100px' }} />
                         <li>your location</li>
                         <span>107 Rd No 8</span>

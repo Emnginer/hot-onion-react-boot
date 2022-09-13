@@ -1,6 +1,36 @@
 .proceed-cart{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 100px
+
+}
+.shipment input{
+    width:300px;
+    border: 1px solid #ddd;
+    background-color: aliceblue;
+    outline:none;
+    padding:5px;
+    border-radius: 5px;
+
+}
+
+.shipment .shipment-save{
+    background-color: #E7173F;
+    color: white;
+    font-weight: bold;
+}
+
+.cart{
+    width:250px;
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+
+.cart p{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cart Button{
+    margin-left: 20px;
 }

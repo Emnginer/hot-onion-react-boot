@@ -9,13 +9,11 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { userContext } from '../../App';
 import NavBar from '../NavBar/NavBar';
-
+import './Login.css';
 
 const app = initializeApp(firebaseConfig);
-
-
 const Login = (props) => {
-    
+
     const cart = props.cart;
     const [users, setUsers] = useState({
         isSignIn: false,
@@ -102,26 +100,26 @@ const Login = (props) => {
     return (
 
         <div>
-           <NavBar cart={cart}></NavBar>
+            <NavBar cart={cart}></NavBar>
+            <div className="background">
+                <div className='App login-form'>
+                    <h2>Login</h2>
 
-            <div className='App' style={{ margin: '50px auto' }}>
-                <h2>this is the login</h2>
+                    <form onSubmit={handleSubmit}>
 
-                <form onSubmit={handleSubmit}>
+                        <input type="text" name='email' onBlur={handleChange} placeholder='Email' required /> <br />
+                        <input type="password" name='password' onBlur={handleChange} placeholder='Password' required /> <br />
+                        <input type="submit" value="login" />
 
-                    <input type="text" name='email' onBlur={handleChange} placeholder='Email' required /> <br />
-                    <input type="password" name='password' onBlur={handleChange} placeholder='Password' required /> <br />
-                    <input type="submit" value="login" />
+                    </form>
 
+                    <Link to="/signUp"><p className='mt-3'>create an account ?</p></Link>
 
-                    <Link to="/signUp"><p>create an account ?</p></Link>
+                    <p style={{ color: 'red' }}>{users.error}</p>
+                    <p style={{ color: 'green' }}>{users.success}</p>
+                    <p style={{ color: 'red' }}>{users.passwordError}</p>
 
-                </form>
-
-                <p style={{ color: 'red' }}>{users.error}</p>
-                <p style={{ color: 'green' }}>{users.success}</p>
-                <p style={{ color: 'red' }}>{users.passwordError}</p>
-
+                </div>
             </div>
         </div>
 

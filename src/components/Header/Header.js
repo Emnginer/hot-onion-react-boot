@@ -14,13 +14,13 @@ const Header = (props) => {
             <NavBar cart={cart}></NavBar>
 
             <div className='header-banner'>
-            <div className='banner-content'>
+                
+            <div className='banner-content App d-none d-md-block'>
                     <h2>Best food waiting for your belly</h2>
                     <input type="text" placeholder='search food items' />
                     <button>search</button>
             </div>
-                <img src={banner} alt="" className='img-fluid' />
-                
+                <img src={banner} alt="" />     
             </div>
 
             {/* <div>

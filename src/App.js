@@ -23,7 +23,7 @@ export const userContext = createContext();
 function App() {
 
   const [cart, setCart] = useState([]);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   const [logInUser, setLogInUser] = useState([]);
 
 

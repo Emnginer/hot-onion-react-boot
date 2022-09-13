@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { foodData } from '../../data/fakeData';
 import FoodItem from '../FoodItem/FoodItem';
-import './Food.css'
+import './Food.css';
 
 const Food = (props) => {
     const [foods, setFoods] = useState(foodData);
     const cart = props.cart;
-    const setCart = props.setCart;
-
     const lunch = () => {
         const lunchFood = foodData.filter(fd => fd.category === "lunch");
         setFoods(lunchFood);
@@ -48,7 +46,7 @@ const Food = (props) => {
                
             
 
-            <div className="text-center">
+            <div className="text-center mt-5">
                 {
                     cart.length > 0 ? <Link to="/food/ProceedCart"><button className="btn btn-danger" >Proceed Check Out</button></Link>  :
                     <button className="btn btn-danger" disabled>Proceed Check Out</button>

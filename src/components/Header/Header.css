@@ -1,32 +1,32 @@
-
 .header{
     display: flex;
     justify-content: space-between;
 }
 .header-banner{
-    width: 109%;
+    /* width: 109%;
     display: block;
-    margin-left: -5%;
+    */
     
 }
 .header-banner img{
-    width:100%;
-    background-position: center center;
-    background-size: 100%;
+    width:109%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    height:500px
+    margin-left: -5%;
     
 }
 .banner-content{
     position: absolute;
     top: 39%;
-    left:34%
+    left: 35%
+    
 }
 .banner-content input[type=text]{
     width:350px;
     border:none;
     padding:12px;
     border-radius: 20px;
+    outline:none;
 }
 .banner-content button{
     width:100px;
@@ -36,7 +36,7 @@
     background-color: #E7173F;
     color:white;
     border-radius: 20px;
-    position:absolute;
+    position:relative;
     right:69px
 }
 nav a {

@@ -4,6 +4,16 @@
     margin:10px;
  
 }
+.logOut{
+    background-color: #E7173F;
+    border-radius: 20px;
+    border:none;
+    color:white;
+    width:80px;
+    margin: 10px;
+    font-weight: 700;  
+    
+}
 .signUp a{
     color:white;
     text-decoration: none;

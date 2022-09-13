@@ -1,8 +1,13 @@
-.rider img {
+.rider .riderImg {
     background-size: cover;
     width:100%; 
     background-position: center center;
     background-repeat: no-repeat;
     height: 700px;
     position: fixed;
+    z-index: -1;
+}
+
+.rider .logoImg{
+    position:absolute;
 }

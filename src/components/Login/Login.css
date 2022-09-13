@@ -1,0 +1,29 @@
+.background{
+    background-image: url(../../images/bannerbackground.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 109%;
+    height:500px;
+    margin-left: -5%;  
+
+}
+.login-form {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    
+}
+.login-form input{
+    width: 100%;  
+    border:1px solid #E7173F;
+    outline:none;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    padding: 8px;
+    margin: 10px;
+}
+
+.login-form input[type=submit] {
+    background-color: #E7173F;
+    color:white
+}

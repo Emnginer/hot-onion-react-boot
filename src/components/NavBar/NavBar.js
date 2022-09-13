@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
-import logo from '../../images/logo2.png'
+import logo from '../../images/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { userContext } from '../../App';
@@ -31,7 +31,7 @@ const NavBar = (props) => {
                         <Nav.Link className='cart-icon d-flex justify-content-center align-items-center'><Link to="/food/ProceedCart"><FontAwesomeIcon icon={faCartShopping} /> <sup>{cart?.length}</sup></Link></Nav.Link>
 
                         {
-                            logInUser.email && logInUser.password ? <button onClick={() => setLogInUser({})}>log Out</button> :
+                            logInUser.email && logInUser.password ? <button className='logOut' onClick={() => setLogInUser({})}>log Out</button> :
                                 <div className='d-flex justify-content-center align-items-center'>
                                     <Nav.Link className='login'><Link to="/login">Login</Link></Nav.Link>
                                     <Nav.Link className='signUp'><Link to="/signUp">Sign Up</Link></Nav.Link>

@@ -14,3 +14,31 @@
     font-size: 40px;
     margin-left:8px
 }
+
+.count-text{
+    width: 150px;
+    background-color:azure;
+    border:1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px
+    
+    
+}
+.count-text span{
+    font-size: 30px;
+    font-weight: 500;
+    margin:0px 18px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor:pointer
+}
+
+.count-text span:nth-child(1):hover{
+    color: #E7173F;
+
+    
+}
+.count-text span:nth-child(3):hover{
+    color: #E7173F
+}

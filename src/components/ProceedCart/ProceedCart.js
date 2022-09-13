@@ -53,45 +53,45 @@ const ProceedCart = (props) => {
     return (
         <div>
             <NavBar cart={cart}></NavBar>
+            <div className="container" style={{marginTop:'40px'}}>
+                <div className='proceed-cart row'>
+                    <div className='shipment col-md-6'>
+                        <h4 style={{marginBottom:'20px',borderBottom:'1px solid black',padding: '5px'}}>Submit Delivery Details & Place Order</h4>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input {...register("exampleRequired1", { required: true })} placeholder="name" /> <br />
+                            {errors.exampleRequired1 && <span style={{color: 'red'}}>This field is required</span>} <br />
+                            <input {...register("exampleRequired2", { required: true })} placeholder="email" /> <br />
+                            {errors.exampleRequired2 && <span style={{color: 'red'}}>This field is required</span>}<br />
+                            <input {...register("exampleRequired3", { required: true })} placeholder="address" /> <br />
+                            {errors.exampleRequired3 && <span style={{color: 'red'}}>This field is required</span>}<br />
+                            <input {...register("exampleRequired4", { required: true })} placeholder="phone" /> <br />
+                            {errors.exampleRequired4 && <span style={{color: 'red'}}>This field is required</span>}<br />
+                            <input type="submit" className='shipment-save'/>
+                        </form>
+                    </div>
 
 
-            <div className='proceed-cart'>
-                <div className='shipment'>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("exampleRequired1", { required: true })} placeholder="name" /> <br />
-                        {errors.exampleRequired1 && <span>This field is required</span>} <br />
-                        <input {...register("exampleRequired2", { required: true })} placeholder="email" /> <br />
-                        {errors.exampleRequired2 && <span>This field is required</span>}<br />
-                        <input {...register("exampleRequired3", { required: true })} placeholder="address" /> <br />
-                        {errors.exampleRequired3 && <span>This field is required</span>}<br />
-                        <input {...register("exampleRequired4", { required: true })} placeholder="phone" /> <br />
-                        {errors.exampleRequired4 && <span>This field is required</span>}<br />
 
-                        <input type="submit" />
-                    </form>
+
+                    <div className='cart col-md-6'>
+                        <p>Address: {shipments.address}</p>
+                        <p>item add: {cart?.length}</p>
+                        <p>quantity: {quantity}</p>
+                        <p>price: {cart[0]?.price}</p>
+                        <p>total price:{result}</p>
+
+
+                        {
+                            shipments.submit ? <Link to='/order-place'><Button variant="danger">Place Order</Button></Link> :
+                                <Button disabled variant="danger" >place order</Button>
+                        }
+
+                    </div>
+
+
                 </div>
-
-
-
-
-                <div className='cart'>
-                    <h2>item add: {cart?.length}</h2>
-                    <h2>quantity: {quantity}</h2>
-                    <p>price: {cart[0]?.price}</p>
-                    <p>total price:{result}</p>
-
-
-
-                    {
-                        shipments.submit ? <Link to='/order-place'><Button variant="danger">Place Order</Button></Link> :
-                            <Button disabled variant="danger" >place order</Button>
-                    }
-
-
-                </div>
-
-
             </div>
+
 
         </div>
 

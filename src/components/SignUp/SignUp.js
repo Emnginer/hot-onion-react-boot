@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 
 const SignUp = (props) => {
     const cart = props.cart;
-   const [users, setUsers] = useState({
+    const [users, setUsers] = useState({
         isSignIn: false,
         name: '',
         email: '',
@@ -34,9 +34,9 @@ const SignUp = (props) => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-const [logInUser, setLogInUser] = useContext(userContext);
+    const [logInUser, setLogInUser] = useContext(userContext);
 
-  const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         if (users.email && users.password) {
             if (users.password === users.confirmPassword) {
                 const auth = getAuth();
@@ -47,11 +47,11 @@ const [logInUser, setLogInUser] = useContext(userContext);
                         newUser.success = "user created successfully";
                         newUser.error = '';
                         newUser.passwordError = '';
-                        updateUserName(users.name) 
+                        updateUserName(users.name)
                         setUsers(newUser);
                         setLogInUser(newUser);
                         navigate(from, { replace: true });
-                        
+
                     })
                     .catch((error) => {
                         const newUser = { ...users }
@@ -83,7 +83,7 @@ const [logInUser, setLogInUser] = useContext(userContext);
         event.preventDefault();
     }
 
-  const handleChange = (event) => {
+    const handleChange = (event) => {
         let isFormValid = true;
         if (event.target.name === 'email') {
             isFormValid = /\S+@\S+\.\S+/.test(event.target.value);
@@ -110,13 +110,13 @@ const [logInUser, setLogInUser] = useContext(userContext);
     const updateUserName = (name) => {
         const auth = getAuth();
         updateProfile(auth.currentUser, {
-          displayName: name
+            displayName: name
         }).then(() => {
-          console.log('user name updated successfully');
+            console.log('user name updated successfully');
         }).catch((error) => {
-          // An error occurred
-          // ...
-        }); 
+            // An error occurred
+            // ...
+        });
     }
 
 
@@ -124,29 +124,29 @@ const [logInUser, setLogInUser] = useContext(userContext);
 
         <div>
             <NavBar cart={cart}></NavBar>
+            <div className='background'>
+                <div className='App login-form'>
+                    <h2>Sign In Here</h2>
 
-            <div className='App' style={{ margin: '50px auto' }}>
-                <h2>this is the login</h2>
-
-                <form onSubmit={handleSubmit}>
-                    <input type="text" name='name' onBlur={handleChange} placeholder='your name' required /> <br />
-                    <input type="text" name='email' onBlur={handleChange} placeholder='Email' required /> <br />
-                    <input type="password" name='password' onBlur={handleChange} placeholder='Password' required /> <br />
-                    <input type="password" name='confirmPassword' onBlur={handleChange} placeholder='Confirm Password' required /> <br />
-                    <input type="submit" value="Sign Up" />
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" name='name' onBlur={handleChange} placeholder='your name' required /> <br />
+                        <input type="text" name='email' onBlur={handleChange} placeholder='Email' required /> <br />
+                        <input type="password" name='password' onBlur={handleChange} placeholder='Password' required /> <br />
+                        <input type="password" name='confirmPassword' onBlur={handleChange} placeholder='Confirm Password' required /> <br />
+                        <input type="submit" value="Sign Up" />
 
 
-                    <Link to="/login"><p>already have an account ?</p></Link>
+                        <Link to="/login"><p>already have an account ?</p></Link>
 
-                </form>
+                    </form>
 
-                <p style={{ color: 'red' }}>{users.error}</p>
-                <p style={{ color: 'green' }}>{users.success}</p>
-                <p style={{ color: 'red' }}>{users.passwordError}</p>
+                    <p style={{ color: 'red' }}>{users.error}</p>
+                    <p style={{ color: 'green' }}>{users.success}</p>
+                    <p style={{ color: 'red' }}>{users.passwordError}</p>
 
+                </div>
             </div>
         </div>
-
     );
 };
 
