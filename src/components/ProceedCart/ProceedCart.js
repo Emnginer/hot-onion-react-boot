@@ -1,19 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './ProceedCart.css'
 import Button from 'react-bootstrap/Button';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import logo from '../../images/logo2.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { userContext } from '../../App';
 import NavBar from '../NavBar/NavBar';
 
 const ProceedCart = (props) => {
     console.log(props)
     /// react hook form 
-    const [logInUser, setLogInUser] = useContext(userContext)
     const [shipments, setShipments] = useState({
         submit: false,
         name: '',
